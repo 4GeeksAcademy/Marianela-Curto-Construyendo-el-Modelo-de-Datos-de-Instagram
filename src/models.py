@@ -50,7 +50,7 @@ class Comment(db.Model):
         return {
             "id": self.id,
             "comment_text": self.comment_text,
-            "author_idt": self.author_id,
+            "author_id": self.author_id,
             "post_id": self.post_id,
             # do not serialize the password, its a security breach
         }
@@ -68,7 +68,7 @@ class Post(db.Model):
         return {
             "id": self.id,
             "text": self.text,
-            "user_id": self.ser_id,
+            "user_id": self.user_id,
             # do not serialize the password, its a security breach
         }    
     
